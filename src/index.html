@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC TASK </title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp">
+  </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- div tag for entire page -->
+   <div class="">
+   
+    <!-- header  -->
+    <header class="sticky top-0 z-30 w-full px-2 py-4  bg-white  shadow-lg shadow-slate-900/40 sm:px-4 border-yellow-300 border-[4px]">
+        <div class="flex items-center justify-between mx-auto max-w-[95%]">
+          <div class="flex gap-2">
+            <img src="./assets/navLogo.svg" alt="" class="md:h-11 h-8">
+            <h2 class="mt-1 text-slate-600 font-semibold md:text-xl text-base">GDSC RCOEM</h2>
+          </div>
+          <div class="flex items-center space-x-1 ">
+            <ul class="hidden space-x-2 md:inline-flex">
+              <li><a href="#Home" class="px-4 py-2 font-semibold text-gray-700 rounded">Home</a></li>
+              <li><a href="#Events" class="px-4 py-2 font-semibold text-gray-700 rounded">Events</a></li>
+              <li><a href="#Team" class="px-4 py-2 font-semibold text-gray-700 rounded">Team</a></li>
+              <li><a href="#Alumni" class="px-4 py-2 font-semibold text-gray-700 rounded">Alumni</a></li>
+              <li><a href="#Contact" class="px-4 py-2 font-semibold text-gray-700 rounded">Contact</a></li>
+            </ul>
+            <div class="inline-flex md:hidden" x-data="{ open: false }">
+              <button class="flex-none px-2 " @click="open = true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h19M4 12h19M4 18h19" />
+                </svg>
+                <span class="sr-only">Open Menu</span>
+              </button>
+              <div
+                class="absolute top-0  right-0 z-50 flex flex-col p-2 pb-4 m-4 space-y-3 bg-gradient-to-br from-slate-100 to-slate-200  g-violet-100b rounded shadow-slate-600 shadow-lg"
+                x-show.transition="open" @click.away="open = false" x-cloak>
+                <button class="self-end flex-none px-2 ml-2" @click="open = false">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span class=" sr-only">Close Menu</span>
+                </button>
+                <ul class="space-y-10 text-center  p-12 ">
+                  <li><a href="#Home" class="px-4 py-2 font-semibold text-red-400 rounded">Home</a></li>
+                  <li><a href="#Events" class="px-4 py-2 font-semibold text-green-600 rounded">Events</a></li>
+                  <li><a href="#Team" class="px-4 py-2 font-semibold text-blue-500 rounded">Team</a></li>
+                  <li><a href="#Alumni" class="px-4 py-2 font-semibold text-yellow-400 rounded">Alumni</a></li>
+                  <li><a href="#Contact" class="px-4 py-2 font-semibold text-purple-500 rounded">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- dark mode and light mode toggle button -->
+            
+<label class="relative inline-flex items-center cursor-pointer">
+  <input type="checkbox" value="" class="sr-only peer">
+  <div class="w-11 h-6 bg-gray-800 peer-focus:outline-none   rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white  after:rounded-full after:h-5 after:w-5 after:transition-all  "></div>
+</label>
+
+          </div>
+         
+        </div>
+      </header>
+
+      <!-- home section -->
+      <div id="Home" class="max-w-full ">
+        <div class="">
+            <div class="flex max-w-[50%] md:max-w-[100%]  ">
+                <img src="./assets/dash_image.svg" alt="" class="ml-auto mt-10">
+                <img src="./assets/plane.svg" alt="" class="mr-2 mb-9 md:max-w-full max-w-[50%]">
+            </div>
+            <!-- <img src="./assets/Google Developer Student Clubs.jpg" alt="" class="mx-auto"> -->
+            <h1 class=" text-center md:text-7xl text-3xl  font-bold  lg:absolute md:inset-48 "><span class="text-red-500">Google</span> <span class="text-blue-500">Developer</span> <span class="text-yellow-500">Student</span> <span class="text-green-500">Clubs</span></h1>
+            <!-- bg-gradient-to-r from-red-500 via-blue-600 to-green-500 text-transparent bg-clip-text  -->
+            <!-- main heading -->
+
+            <!-- <div class=" md:text-7xl text-3xl  font-bold lg:absolute md:inset-48 flex  r justify-evenly  " x-data="
+            {
+            open: true, }">
+              <h1 class="text-red-500 " x-show="lg:open">Google</h1>
+              <h1 class="text-blue-500" x-show="lg:open">Developer</h1>
+              <h1 class="text-yellow-500" x-show="lg:open">Student</h1>
+              <h1 class="text-green-500" x-show="lg:open">Clubs</h1>
+            </div> -->
+
+            <div class="text-center mx-auto md:space-y-9 space-y-3  ">
+                
+                <h2 class="md:text-5xl text-xl  font-semibold text-gray-600 ">RCOEM Chapter</h2>
+                <img src="./assets/home_img.svg" alt="" class="m-auto max-w-[90%] md:max-w-[100%]">
+                <p class="md:text-2xl text-base text-slate-500   md:max-w-[60%] mx-auto sm:max-w-[80%] max-w-[90%]  ">
+                    Google Developer Student Clubs are community groups for  college and university students interested in Google developer technologies.
+                </p>
+                <!-- join us button -->
+                <button class="bg-gradient-to-r from-indigo-500 to-blue-500  md:px-10 px-5 md:py-3 py-2 rounded-tr-3xl rounded-bl-3xl"><a href="#join" class="text-white font-bold md:text-2xl">JOIN US</a></button> 
+                <div class="">
+                    <img src="./assets/downArrow_1.svg" alt="" class="mx-auto md:h-full h-5">
+                    <img src="./assets/downArrow_2.svg" alt="" class="mx-auto md:h-full h-5">
+                    <img src="./assets/downArrow_3.svg" alt="" class="mx-auto md:h-full h-5">
+                </div>
+                <h2 class="md:text-5xl text-xl  font-semibold text-gray-600 ">Get To Know Us!</h2>
+            </div>
+        </div>
+      </div>
+      <!-- home section ended -->
+
+      <!-- entire sub pages  -->
+      <div class="max-w-full mt-5 px-3 space-y-6 " id="join">
+        <!-- first page -->
+        <div class="mx-auto mt-16">
+           <!-- heading -->
+           <div class="mx-auto flex flex-col items-center space-y-1">
+            <h1 class="md:text-3xl text-xl text-slate-500 font-semibold">Our Mission</h1>
+            <img src="./assets/blue_line.svg" alt="" class="h-1">
+           </div>
+           <!-- heading ended -->
+           <!-- sub page -->
+           <div class="flex flex-wrap md:max-w-[100%] max-w-full mx-auto justify-between mt-4">
+            <!-- left -->
+            <div id="left" class=" mt-4 maxw md:max-w-full max-w-[60%] mx-auto ">
+                <img src="./assets/first_sub.svg" alt="" class=" ">
+            </div>
+            <div id="right " class="md:max-w-[50%] w-full  m-auto md:border-r-[10px] border-r-[6px]  rounded-r-2xl border-blue-500 " >
+             <h1 class="text-right md:text-2xl sm:text-xl  text-base text-slate-600   p-2 text-transparent  bg-clip-text bg-gradient-to-r from-slate-700 to-gray-500">
+                Our mission involves community engagement, leadership development, building strong tech foundation, while enabling all tech enthusiasts to contribute to the global society.
+             </h1>
+            </div>
+            <!-- right ended -->
+           </div>
+           <!-- subpage ended -->
+        </div>
+        <!-- first page ended -->
+
+         <!-- second  page -->
+         <div class="mx-auto space-y-9">
+            <!-- heading -->
+            <div class="mx-auto flex flex-col items-center space-y-1">
+             <h1 class="md:text-3xl text-xl text-slate-500 font-semibold">Our Perspective</h1>
+             <img src="./assets/green_line.svg" alt="" class="h-1">
+            </div>
+            <!-- heading ended -->
+            <!-- sub page -->
+            <div class="flex flex-wrap md:flex-row-reverse space-y-3 md:space-y-0 md:max-w-[100%] max-w-full mx-auto justify-between mt-4">
+             <!-- left -->
+             <div id="left" class=" mt-4 maxw md:max-w-full max-w-[80%] mx-auto ">
+                 <img src="./assets/second_sub.svg" alt="" class=" ">
+             </div>
+             <div id="right " class="md:max-w-[40%] w-full  my-auto mx-auto" >
+              <h1 class="text-left md:text-2xl sm:text-xl  text-base text-slate-600   p-2 text-transparent  bg-clip-text bg-gradient-to-r from-slate-700 to-gray-500  md:border-l-[10px] border-l-[6px] rounded-l-2xl border-green-500 md:mt-10 mt-0">
+                We're a community-driven initiative aiming to bridge the gap between research and practice , develop evolutionary thinking and network throughout the process. We believe in connecting fellow developers , spreading stimulative ideas and working for a solution driven team.
+              </h1>
+             </div>
+             <!-- right ended -->
+            </div>
+            <!-- subpage ended -->
+         </div>
+         <!-- second page ended -->
+
+          <!-- third page -->
+        <div class="mx-auto space-y-6">
+            <!-- heading -->
+            <div class="mx-auto flex flex-col items-center space-y-1 md:mt-20 m-5">
+             <h1 class="md:text-3xl text-xl text-slate-500 font-semibold">What Keeps Us Going?</h1>
+             <img src="./assets/red_line.svg" alt="" class="h-1">
+            </div>
+            <!-- heading ended -->
+            <!-- sub page -->
+            <div class="flex flex-wrap md:max-w-[100%] max-w-full mx-auto justify-between mt-11 space-y-3 ">
+             <!-- left -->
+             <div id="left" class=" mt-4  md:max-w-[35%] max-w-[80%] mx-auto ">
+                 <img src="./assets/third_sub.svg" alt="" class=" ">
+             </div>
+             <div id="right " class="md:max-w-[50%] max-w-full  mx-auto my-auto " >
+              <h1 class="text-right md:text-2xl sm:text-xl  text-base text-slate-600   p-2 text-transparent  bg-clip-text bg-gradient-to-r from-slate-700 to-gray-500 md:border-r-[10px] border-r-[6px]  rounded-r-2xl border-blue-500">
+                Our club helps students to connect, learn, empower and grow. Teamwork, innovative thinking, communication, and leading with solutions is what helps us achieve new heights. The entire team works in coordination, to inspire and motivate the upcoming coding community to evolve their skills and broaden their horizons of knowledge.
+              </h1>
+             </div>
+             <!-- right ended -->
+            </div>
+            <!-- subpage ended -->
+         </div>
+         <!-- third page ended -->
+
+      </div>
+      <!-- entire sub pages are ended -->
+      
+      <!-- rounded circles -->
+      <div class="mt-28 bg-teal-50 py-7">
+        <div class="grid grid-cols-2 md:flex justify-evenly flex-wrap ">
+            <!-- first circle -->
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <!-- the circle -->
+                <div class="flex flex-col items-center">
+                    <div class="relative">
+                        <img src="./assets/circleFirst.svg" alt="" class="mx-auto w-32 md:w-full">
+                        <h1 class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-gray-600 md:text-5xl">03+</h1>
+                    </div>
+                </div>
+        
+                <!-- down text -->
+                <div class="text-center">
+                    <h1 class="text-xl font-semibold md:text-4xl">Years</h1>
+                </div>
+            </div>
+            <!-- first circle ended -->
+            <!-- second circle started-->
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <!-- the circle -->
+                <div class="flex flex-col items-center">
+                    <div class="relative">
+                        <img src="./assets/circleFirst.svg" alt="" class="mx-auto  w-32 md:w-full">
+                        <h1 class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-gray-600 md:text-5xl">10+</h1>
+                    </div>
+                </div>
+        
+                <!-- down text -->
+                <div class="text-center">
+                    <h1 class="text-xl font-semibold md:text-4xl">Events</h1>
+                </div>
+            </div>
+            <!-- second circle ended -->
+            <!-- third circle started-->
+            <div class="w-full md:w-1/2 lg:w-1/4 lg:mt-0 mt-9">
+                <!-- the circle -->
+                <div class="flex flex-col items-center">
+                    <div class="relative">
+                        <img src="./assets/circleFirst.svg" alt="" class="mx-auto w-32 md:w-full">
+                        <h1 class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-gray-600 md:text-5xl">1K+</h1>
+                    </div>
+                </div>
+        
+                <!-- down text -->
+                <div class="text-center">
+                    <h1 class="text-xl font-semibold md:text-4xl">Community <br>Members</h1>
+                </div>
+            </div>
+            <!-- third circle ended -->
+            <!-- fourth circle started-->
+            <div class="w-full md:w-1/2 lg:w-1/4 lg:mt-0 mt-9">
+                <!-- the circle -->
+                <div class="flex flex-col items-center">
+                    <div class="relative">
+                        <img src="./assets/circleFirst.svg" alt="" class="mx-auto w-32 md:w-full">
+                        <h1 class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-gray-600 md:text-5xl">200+</h1>
+                    </div>
+                </div>
+        
+                <!-- down text -->
+                <div class="text-center">
+                    <h1 class="text-xl font-semibold md:text-4xl">Attendees</h1>
+                </div>
+            </div>
+            <!-- fourth circle ended -->
+        </div>
+        
+      </div>
+
+      <!-- technologie code started -->
+      <div class="mt-9 ">
+        <div class="flex flex-col space-y-8">
+          <!-- heading -->
+          <div class="flex flex-col items-center space-y-4">
+           <div class="flex flex-col items-center">
+            <img src="./assets/tech_line.svg" alt="" class="relative md:inset-y-9 inset-y-5 md:max-w-full max-w-[90%]">
+           <h1 class=" text-center md:text-5xl sm:text-3xl text-2xl text-gray-600 font-bold ">Technologies</h1>
+           </div>
+           <h2 class="md:text-4xl sm:text-2xl text-base text-gray-600 font-semibold text-center">Domains That Excite Us to Collaborate and Teach!</h2>
+          </div>
+          <!-- cards  -->
+          <div class="flex justify-around flex-wrap">
+           <!-- card 1 -->
+           <div class="flex flex-col items-center justify-center border-[12px] rounded-3xl border-gray-100 drop-shadow-lg shadow-xl shadow-slate-300 px-9 py-8 m-9 ">
+            <img src="./assets/Android.svg" alt="" class=" md:max-w-full max-w-[55%]">
+            <h1 class="md:text-5xl text-xl text-gray-500 font-bold  ">Android</h1> 
+            <img src="./assets/downArr.svg" alt="" class="md:mt-4 mt-2 max-w-full ">
+           </div>
+           <!-- card 1 ended -->
+           <!-- card 2 -->
+           <div class="flex flex-col items-center justify-center border-[12px] rounded-3xl border-gray-100 drop-shadow-lg shadow-xl shadow-slate-300  px-20 py-8 my-9">
+            <img src="./assets/Flutter.svg" alt="" class="  md:max-w-full max-w-[80%]">
+            <h1 class="md:text-5xl text-xl text-gray-500 font-bold  md:mt-16 mt-2">Flutter</h1> 
+            <img src="./assets/downArr.svg" alt="" class="md:mt-4 mt-2 max-w-full ">
+           </div>
+           <!-- card 2 ended -->
+           <!-- card 3 -->
+           <div class="flex flex-col items-center justify-center border-[12px] rounded-3xl border-gray-100 drop-shadow-lg shadow-xl shadow-slate-300  px-16 py-8 m-9 ">
+            <img src="./assets/cloud.svg" alt="" class="relative  md:max-w-full max-w-[55%]">
+            <h1 class="md:text-5xl text-xl text-gray-500 font-bold  ">cloud</h1> 
+            <img src="./assets/downArr.svg" alt="" class="md:mt-4 mt-2 max-w-full">
+           </div>
+           <!-- card 3 ended -->
+          </div>
+        </div>
+      </div>
+      <!-- technology code ended -->
+
+        <!-- FAQS started -->
+        <div class="mt-8 space-y-5" 
+        x-data="
+        {
+        openFaq1: false, 
+        openFaq2: false, 
+        openFaq3: false, 
+        openFaq4: false, 
+        openFaq5: false, 
+        openFaq6: false
+        }
+        ">
+          <h1 class="md:text-6xl sm:text-3xl text-2xl font-semibold text-gray-500 text-center">FAQs</h1>
+          <div class="flex flex-col items-center justify-center space-y-8">
+            <!-- que -->
+              <div class="flex  border-8 p-2 rounded-r-full rounded-l-full space-x-8 px-6 md:w-[50%]">
+                <button class="" @click="openFaq1 = !openFaq1 "><i class="md:text-5xl text-2xl font-bold text-red-500 " >&#8744;</i></button>
+                <h1 class="md:text-2xl text-lg text-gray-500 font-semibold mt-2" @click="openFaq1 = !openFaq1 ">What is GDSC?</h1>
+              </div>
+              <!-- answer -->
+              <div x-show="openFaq1" class="text-left border-l-[9px] border-l-red-500 rounded-3xl md:max-w-[60%] sm:max-w-[80%] max-w-[90%] shadow-2xl shadow-gray-500 open:duration-700">
+                <p class="md:border-[9px] border-[5px] border-gray-300 p-5 rounded-xl md:text-xl sm:text-lg text-base text-gray-600">Google Developer Student Clubs (GDSC) are community groups for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</p>
+              </div>
+              <!-- answwer ended here -->
+               <!-- que -->
+               <div class="flex  border-8 p-2 rounded-r-full rounded-l-full space-x-8 px-6 md:w-[50%] w-[90%]">
+                <button class="" @click="openFaq2 = !openFaq2"><i class="md:text-5xl text-2xl font-bold text-green-500">&#8744;</i></button>
+                <h1 class="md:text-2xl text-lg text-gray-500 font-semibold mt-2"  @click="openFaq2 = !openFaq2 ">How can you become a part of GDSC ?</h1>
+              </div>
+              <!-- answer -->
+              <div x-show="openFaq2" class="text-left border-l-[9px] border-l-green-500 rounded-3xl md:max-w-[60%] sm:max-w-[80%] max-w-[90%] shadow-2xl shadow-gray-500 open:duration-700">
+                <p class="md:border-[9px] border-[5px] border-gray-300 p-5 rounded-xl md:text-xl sm:text-lg text-base text-gray-600">We conduct an annual team recruitment process. The details of recruitment are posted online a few weeks prior. It’s a two step process involving form filling and personal interview. Students acing both rounds are selected to be the part of the core team.</p>
+              </div>
+              <!-- answwer ended here -->
+               <!-- que -->
+               <div class="flex  border-8 p-2 rounded-r-full rounded-l-full space-x-8 px-6 md:w-[50%]">
+                <button class="" @click="openFaq3 = !openFaq3"><i class="md:text-5xl text-2xl font-bold text-blue-500">&#8744;</i></button>
+                <h1 class="md:text-2xl text-lg text-gray-500 font-semibold mt-2" @click="openFaq3 = !openFaq3">What does a GDSC Lead do?</h1>
+              </div>
+              <!-- answer -->
+              <div x-show="openFaq3" class="text-left border-l-[9px] border-l-blue-500 rounded-3xl md:max-w-[60%] sm:max-w-[80%] max-w-[90%] shadow-2xl shadow-gray-500 open:duration-700">
+                <p class="md:border-[9px] border-[5px] border-gray-300 p-5 rounded-xl md:text-xl sm:text-lg text-base text-gray-600">A GDSC Lead fills a lot of shoes. He works with the university to build the club, recruit the core team, host workshops, build projects, collaborate with local partners.</p>
+              </div>
+              <!-- answwer ended here -->
+               <!-- que -->
+               <div class="flex  border-8 p-2 rounded-r-full rounded-l-full space-x-8 px-6 md:w-[50%]">
+                <button class="" @click="openFaq4 = !openFaq4"><i class="md:text-5xl text-2xl font-bold text-yellow-500">&#8744;</i></button>
+                <h1 class="md:text-2xl text-lg text-gray-500 font-semibold mt-2" @click="openFaq4 = !openFaq4 ">How is DSC related to Google?</h1>
+              </div>
+              <!-- answer -->
+              <div x-show="openFaq4" class="text-left border-l-[9px] border-l-yellow-500 rounded-3xl md:max-w-[60%] sm:max-w-[80%] max-w-[90%] shadow-2xl shadow-gray-500 open:duration-700">
+                <p class="md:border-[9px] border-[5px] border-gray-300 p-5 rounded-xl md:text-xl sm:text-lg text-base text-gray-600">A GDSC Lead fills a lot of shoes. He works with the university to build the club, recruit the core team, host workshops, build projects, collaborate with local partners.</p>
+              </div>
+              <!-- answwer ended here -->
+               <!-- que -->
+               <div class="flex  border-8 p-2 rounded-r-full rounded-l-full space-x-8 px-6 md:w-[50%]">
+                <button class="" @click="openFaq5 = !openFaq5"><i class="md:text-5xl text-2xl font-bold text-red-500">&#8744;</i></button>
+                <h1 class="md:text-2xl text-lg text-gray-500 font-semibold mt-2 " @click="openFaq5 = !openFaq5 ">How to reach us?</h1>
+              </div>
+              <!-- answer -->
+              <div x-show="openFaq5" class="text-left border-l-[9px] border-l-red-500 rounded-3xl md:w-[50%] sm:-[80%] w-[90%] shadow-2xl shadow-gray-500 open:duration-700">
+                <p class="md:border-[13px] border-[5px] border-gray-200 p-5 rounded-xl md:text-xl sm:text-lg text-base text-gray-600 ">Mail us at <a href="mailto:dsc.rknec@gmail.com" class="underline hover:text-blue-500 font-semibold">"dsc.rknec@gmail.com "</a></p>
+              </div>
+              <!-- answwer ended here -->
+               
+              
+          </div>
+        </div>
+        <!-- FAQS ended here -->
+
+      <!-- footer code started-->
+      <footer class="mt-20  ">
+        <div class="bg-gradient-to-r from-sky-200 to-blue-500 flex md:rounded-t-full rounded-t-[300px] justify-evenly pt-20 text-white md:text-xl text-base md:flex-row flex-col md:space-y-0 space-y-4 px-11 shadow-inner shadow-indigo-400  ">
+          <div class=" flex flex-col items-center">
+            <img src="./assets/navLogo.svg" alt="">
+            <h1 class="">Google Developer Student Clubs</h1>
+            <h1 class="">RCOEM</h1>
+          </div>
+          <div class="space-y-4 flex flex-col items-center">
+             <h1 class="flex gap-6">
+               <img src="./assets/location.svg" alt="" class="md:max-w-full max-w-[25px]">
+               <p class="">Shri Ramdeobaba College of Engineering and Management, <br>  Ramdeo Tekdi, Gittikhadan,Katol Road,Nagpur- 440013</p>
+             </h1>
+             <h1 class="flex gap-6">
+              <img src="./assets/mail.svg" alt="" class="md:max-w-full max-w-[25px]">
+              <p class="">dsc.rknec@gmail.com</p>
+             </h1>
+          </div>
+          <div class="space-y-4 flex flex-col items-center">
+            <h1 class="">Follow Us:</h1>
+            <p class="flex gap-4 ">
+              <a href="https://www.instagram.com/gdsc_rcoem/" class=""><img src="https://img.freepik.com/premium-vector/black-outline-social-media-logo_197792-2416.jpg" alt="" class="md:w-[53px] w-12 rounded-full p-1"></a>
+              <a href="https://www.linkedin.com/company/gdsc-rcoem/" class=""><img src="./assets/linkedIn.svg" alt="" class="md:w-12 w-10  rounded-full"></a>
+              <a href="https://twitter.com/gdsc_rcoem" class=""><img src="./assets/twitter.svg" alt="" class="md:w-12 w-10 rounded-full"></a>
+            </p>
+          </div>
+          
+        </div>
+        
+        <p class="text-transparent h-[2px] bg">.</p>
+        <div class="flex flex-col items-center bg-gradient-to-r from-sky-200 to-blue-500  text-white md:text-xl text-base pb-11">
+          <p class="flex ">
+            <h1 class="font-semibold mt-4">Developed by kamalnath dhekwar</h1>
+            <h2 class="flex gap-4 mt-3">
+              <a href="https://www.instagram.com/kamalnath_06/" class=""><img src="https://cdn-icons-png.flaticon.com/128/2504/2504918.png" alt="" class="md:w-8 w-6 "></a>
+            <a href="https://github.com/kamalnathdhekwar" class=""><img src="https://cdn-icons-png.flaticon.com/128/2504/2504911.png" alt="" class="md:w-8 w-6"></a>
+            <a href="https://www.linkedin.com/in/kamalnath-dhekwar-0a5a38261/?originalSubdomain=in" class=""><img src="https://cdn-icons-png.flaticon.com/128/2504/2504923.png" alt="" class="md:w-8 w-6"></a>
+            </h2>
+          </p>
+        </div>
+      </footer>
+      <!-- footer code ended-->
+
+      
+
+      
+   </div>
+</body> 
+</html>

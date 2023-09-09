@@ -1,0 +1,19 @@
+div header li a{
+    font-size: 18px;
+  }
+  div header li a:hover{
+   
+    color: #1f4cff;
+    animation-name: nav;
+    animation-duration:1s;
+   }
+  
+  @keyframes nav {
+    from{
+      font-size: 18px;
+    }
+    from{
+      font-size: 19px;
+    }
+  }
+  
